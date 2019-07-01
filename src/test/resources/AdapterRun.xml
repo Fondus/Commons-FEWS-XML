@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Run xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.wldelft.nl/fews/PI" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_run.xsd" version="1.8">
+    <logLevel>debug</logLevel>
+    <timeZone>0.0</timeZone>
+    <startDateTime date="2017-06-18" time="16:00:00"/>
+    <endDateTime date="2017-06-21" time="16:00:00"/>
+    <time0 date="2017-06-20" time="16:00:00"/>
+    <lastObservationDateTime date="2017-06-21" time="16:00:00"/>
+    <workDir>\Taiwan\Modules\NCDR\10RMO\Feitsu\TRIGRS\bin</workDir>
+    <inputMapStackFile>\Taiwan\Modules\NCDR\10RMO\Feitsu\TRIGRS\Input\map.xml</inputMapStackFile>
+    <outputDiagnosticFile>\Taiwan\Modules\NCDR\10RMO\Feitsu\TRIGRS\Diagnostics\Diagnostics.xml</outputDiagnosticFile>
+    <outputMapStackFile>\Taiwan\Modules\NCDR\10RMO\Feitsu\TRIGRS\Output\TRIGRS.xml</outputMapStackFile>
+    <properties>
+        <string key="MODEL" value="trigrs_64bit.exe"/>
+        <string key="FILE_INPUT" value="../Input/map.xml"/>
+        <string key="DIR_OUTPUT" value="../Output/"/>
+        <string key="NAME_PREFIX" value="TRIGRS"/>
+        <int key="START" value="47"/>
+        <string key="PARAMETER" value="Factor.safety"/>
+    </properties>
+</Run>
