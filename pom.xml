@@ -27,6 +27,13 @@
 			<email>vipcube@gmail.com</email>
 		</developer>
 	</developers>
+	
+	<scm>
+		<url>https://github.com/Fondus/Commons-FEWS-XML</url>
+		<connection>scm:git:https://github.com/Fondus/Commons-FEWS-XML.git</connection>
+		<developerConnection>scm:git:https://github.com/Fondus/Commons-FEWS-XML.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
