@@ -48,6 +48,18 @@ public class MapStacks extends PiConfigNameSpace {
 		this.schemaLocation = "http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_mapstacks.xsd";
 	}
 	
+	public MapStack get( int index ) {
+		return this.mapStacks.get( index );
+	}
+	
+	public void add( MapStack mapStack ) {
+		this.mapStacks.add( mapStack );
+	}
+	
+	public void clear() {
+		this.mapStacks.clear();
+	}
+	
 	/**
 	 * The static constructor.
 	 * 
