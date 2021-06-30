@@ -1,14 +1,13 @@
 package tw.fondus.commons.fews.pi.config.xml.log;
 
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import tw.fondus.commons.fews.pi.config.xml.util.XMLUtils;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
-import tw.fondus.commons.fews.pi.config.xml.util.XMLUtils;
 
 /**
  * Unit test serialization/deserialization with PiDiagnostics.
@@ -19,19 +18,19 @@ import tw.fondus.commons.fews.pi.config.xml.util.XMLUtils;
 public class PiDiagnosticsTest {
 	private Path path;
 	
-	@Before
+	@BeforeEach
 	public void setUp() throws Exception {
 		this.path = Paths.get( "src/test/resources/Diagnostics.xml" );
-		
-		Assert.assertTrue( Files.exists( this.path ) );
+
+		Assertions.assertTrue( Files.exists( this.path ) );
 	}
 
 	@Test
 	public void test() throws Exception {
-		Assert.assertTrue( XMLUtils.validateXML( this.path, PiDiagnostics.class ) );
+		Assertions.assertTrue( XMLUtils.validateXML( this.path, PiDiagnostics.class ) );
 		
 		PiDiagnostics logMessages = XMLUtils.fromXML( this.path, PiDiagnostics.class );
-		Assert.assertTrue( logMessages.getMessages().size() > 0 );
+		Assertions.assertTrue( logMessages.getMessages().size() > 0 );
 		XMLUtils.printXML( logMessages );
 	}
 }
